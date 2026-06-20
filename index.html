@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mohamed Hossam — Software Engineering Student & Aspiring Front-End Developer. Explore my projects, skills, and journey."
+    />
+    <meta
+      name="keywords"
+      content="Mohamed Hossam, Front-End Developer, Software Engineering, Portfolio, Egyptian Russian University"
+    />
+    <meta name="author" content="Mohamed Hossam Mohamed Abu Elftoh" />
+    <title>Mohamed Hossam | Front-End Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
+        NAVIGATION
+  ============================================================ -->
+    <header class="nav-header" id="navbar" role="banner">
+      <nav class="nav-container" aria-label="Main navigation">
+        <a href="#hero" class="nav-logo" aria-label="Home">
+          <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket"
+            >/&gt;</span
+          >
+        </a>
+
+        <ul class="nav-links" role="list" id="navLinks">
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#certifications"
+              class="nav-link"
+              data-section="certifications"
+              >Certs</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Theme Toggle -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle light/dark mode"
+            title="Toggle theme"
+          >
+            <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+          </button>
+
+          <!-- Mobile Menu -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+      <section class="hero" id="hero" aria-label="Introduction">
+        <!-- Animated background canvas -->
+        <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+        <!-- Floating blobs -->
+        <div class="blob blob-1" aria-hidden="true"></div>
+        <div class="blob blob-2" aria-hidden="true"></div>
+        <div class="blob blob-3" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <!-- Left: Text -->
+          <div class="hero-text reveal-left">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              Available for Internships
+            </div>
+
+            <h1 class="hero-name">
+              <span class="name-line">Mohamed</span>
+              <span class="name-line accent-line">Hossam</span>
+            </h1>
+
+            <p class="hero-title">
+              <span class="typed-text" id="typedText"></span
+              ><span class="cursor" aria-hidden="true">|</span>
+            </p>
+
+            <p class="hero-summary">
+              Software Engineering student at
+              <strong>Egyptian Russian University</strong> — building real
+              products, solving real problems, and leveling up every day.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#projects" class="btn btn-primary">
+                <i class="fas fa-code" aria-hidden="true"></i>
+                View Projects
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+                Contact Me
+              </a>
+              <a
+                href="#"
+                class="btn btn-ghost"
+                id="downloadCV"
+                aria-label="Download CV"
+              >
+                <i class="fas fa-download" aria-hidden="true"></i>
+                Download CV
+              </a>
+            </div>
+
+            <div class="hero-social" aria-label="Social links">
+              <a
+                href="https://github.com/Eng-MohamedHossam"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub profile"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/moh-hossam"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn profile"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a
+                href="mailto:eng0mohamed0hossam5@gmail.com"
+                class="social-link"
+                aria-label="Send email"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Photo -->
+          <div class="hero-photo reveal-right">
+            <div class="photo-wrapper">
+              <div class="photo-ring" aria-hidden="true"></div>
+
+              <img
+                src="imges/profile.jpeg"
+                alt="Profile photo of Mohamed Hossam"
+                class="profile-photo"
+              />
+
+              <!-- Floating tech badges -->
+              <div class="tech-float float-html" aria-hidden="true">HTML</div>
+              <div class="tech-float float-css" aria-hidden="true">CSS</div>
+              <div class="tech-float float-js" aria-hidden="true">JS</div>
+              <div class="tech-float float-py" aria-hidden="true">PY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         ABOUT SECTION
+    ============================================================ -->
+      <section
+        class="section about-section"
+        id="about"
+        aria-labelledby="about-heading"
+      >
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-label">01 — About</span>
+            <h2 class="section-title" id="about-heading">Who I Am</h2>
+          </div>
+
+          <div class="about-grid">
+            <!-- About text -->
+            <div class="about-text reveal-left">
+              <p class="about-lead">
+                I'm a
+                <strong>third-year Software Engineering student</strong> with a
+                genuine passion for building clean, functional, and user-centric
+                web experiences.
+              </p>
+              <p>
+                Enrolled in the
+                <strong>Artificial Intelligence Program</strong> at the Egyptian
+                Russian University, I bridge theoretical computer science
+                concepts with hands-on development. Currently deepening my
+                full-stack foundations through <strong>Route Academy</strong>,
+                with a focused interest in front-end engineering.
+              </p>
+              <p>
+                What drives me? The intersection of
+                <em>technical precision</em> and <em>real-world impact</em>. I
+                don't just write code — I think about why it matters and how it
+                serves users.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight-card">
+                  <i class="fas fa-university" aria-hidden="true"></i>
+                  <div>
+                    <strong>Egyptian Russian University</strong>
+                    <span>Faculty of AI · Software Engineering Department</span>
+                  </div>
+                </div>
+                <div class="highlight-card">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <div>
+                    <strong>Expected Graduation</strong>
+                    <span>2027 · 3rd Year</span>
+                  </div>
+                </div>
+                <div class="highlight-card">
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <div>
+                    <strong>Based in Egypt, Cairo Nasr city</strong>
+                    <span>Open to Remote Internships</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stats cards -->
+            <div class="about-stats reveal-right">
+              <div class="stat-card glass-card">
+                <div class="stat-number counter" data-target="3">0</div>
+                <div class="stat-label">Years Studying SE</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-number counter" data-target="5">0</div>
+                <div class="stat-label">Projects Built</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-number counter" data-target="4">0</div>
+                <div class="stat-label">Certifications</div>
+              </div>
+              <div class="stat-card glass-card">
+                <div class="stat-number counter" data-target="10">0</div>
+                <div class="stat-label">Technologies Learned</div>
+              </div>
+
+              <!-- Currently learning banner -->
+              <div class="learning-now glass-card">
+                <div class="learning-icon">
+                  <i class="fas fa-bolt" aria-hidden="true"></i>
+                </div>
+                <div class="learning-text">
+                  <span class="learning-label">Currently Learning</span>
+                  <strong>Full-Stack Dev</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         SKILLS SECTION
+    ============================================================ -->
+      <section class="section skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">02 — Skills</span>
+          <h2 class="section-title" id="skills-heading">What I Work With</h2>
+        </div>
+ 
+        <div class="skills-grid">
+          <!-- Technical Skills -->
+          <div class="skills-column reveal-left">
+            <h3 class="skills-column-title">
+              <i class="fas fa-code" aria-hidden="true"></i>
+              Technical Skills
+            </h3>
+ 
+            <!--
+              FLIP CARD SYSTEM
+              ─────────────────────────────────────────────────────────
+              ─────────────────────────────────────────────────────────
+            -->
+            <div class="tech-skills-grid" id="techSkillsGrid">
+ 
+              <!-- HTML -->
+              <div class="tech-skill-card glass-card" aria-label="HTML skill">
+                <div class="tech-card-inner">
+                  <!-- FRONT -->
+                  <div class="tech-card-front">
+                    <div class="tech-skill-icon">
+                      <i class="fab fa-html5" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="tech-skill-name">HTML5</h4>
+                    <p class="tech-skill-desc">I structure web pages with semantic, accessible markup — headings, forms, layouts, and everything in between.</p>
+                  </div>
+                  <!-- BACK (activate via JS when ready) -->
+                  <div class="tech-card-back" aria-hidden="true">
+                    <h4>HTML5</h4>
+                    <ul>
+                      <li>Semantic elements</li>
+                      <li>Forms & validation</li>
+                      <li>Accessibility (ARIA)</li>
+                      <li>SEO-friendly structure</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+ 
+              <!-- CSS -->
+              <div class="tech-skill-card glass-card" aria-label="CSS skill">
+                <div class="tech-card-inner">
+                  <div class="tech-card-front">
+                    <div class="tech-skill-icon">
+                      <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="tech-skill-name">CSS3</h4>
+                    <p class="tech-skill-desc">I style responsive, modern interfaces using Flexbox, Grid, CSS variables, animations, and glassmorphism effects.</p>
+                  </div>
+                  <div class="tech-card-back" aria-hidden="true">
+                    <h4>CSS3</h4>
+                    <ul>
+                      <li>Flexbox & Grid layouts</li>
+                      <li>CSS custom properties</li>
+                      <li>Responsive design</li>
+                      <li>Animations & transitions</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+ 
+              <!-- JavaScript -->
+              <div class="tech-skill-card glass-card" aria-label="JavaScript skill">
+                <div class="tech-card-inner">
+                  <div class="tech-card-front">
+                    <div class="tech-skill-icon js-icon" aria-hidden="true">
+                      <span>JS</span>
+                    </div>
+                    <h4 class="tech-skill-name">JavaScript</h4>
+                    <p class="tech-skill-desc">I build interactive UI features — DOM manipulation, event handling, animations, and API fetch calls.</p>
+                  </div>
+                  <div class="tech-card-back" aria-hidden="true">
+                    <h4>JavaScript</h4>
+                    <ul>
+                      <li>DOM manipulation</li>
+                      <li>Event listeners</li>
+                      <li>Intersection Observer</li>
+                      <li>Fetch & async basics</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+ 
+              <!-- Python -->
+              <div class="tech-skill-card glass-card" aria-label="Python skill">
+                <div class="tech-card-inner">
+                  <div class="tech-card-front">
+                    <div class="tech-skill-icon">
+                      <i class="fab fa-python" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="tech-skill-name">Python</h4>
+                    <p class="tech-skill-desc">I write clean Python scripts for data handling, OOP projects, and algorithm implementations. Huawei certified.</p>
+                  </div>
+                  <div class="tech-card-back" aria-hidden="true">
+                    <h4>Python</h4>
+                    <ul>
+                      <li>OOP in Python</li>
+                      <li>Data structures</li>
+                      <li>File & data handling</li>
+                      <li>Huawei certified</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+ 
+              <!-- Frameworks and Libraries -->
+
+               <div class="tech-skill-card glass-card" aria-label="Frameworks and Libraries skill">
+  <div class="tech-card-inner">
+    
+    <div class="tech-card-front">
+      <div class="tech-skill-icon">
+        <i class="fab fa-bootstrap" aria-hidden="true"></i>
+      </div>
+
+      <h4 class="tech-skill-name">Frameworks</h4>
+
+      <p class="tech-skill-desc">
+        I use frontend frameworks to build responsive and efficient UI.
+      </p>
+    </div>
+
+    <div class="tech-card-back" aria-hidden="true">
+      <h4>Frameworks</h4>
+
+      <ul>
+        <li>Bootstrap 5</li>
+        <li>Responsive design</li>
+        <li>UI components</li>
+      </ul>
+    </div>
+
+  </div>
+               </div>
+ 
+              <!-- Git & GitHub -->
+              <div class="tech-skill-card glass-card" aria-label="Git and GitHub skill">
+                <div class="tech-card-inner">
+                  <div class="tech-card-front">
+                    <div class="tech-skill-icon">
+                      <i class="fab fa-git-alt" aria-hidden="true"></i>
+                    </div>
+                    <h4 class="tech-skill-name">Git & GitHub</h4>
+                    <p class="tech-skill-desc">I use Git for version control and GitHub to host, share, and collaborate on projects with teammates.</p>
+                  </div>
+                  <div class="tech-card-back" aria-hidden="true">
+                    <h4>Git & GitHub</h4>
+                    <ul>
+                      <li>Version control</li>
+                      <li>Branching & merging</li>
+                      <li>GitHub collaboration</li>
+                      <li>Project hosting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+ 
+            </div><!-- /tech-skills-grid -->
+
+              <!-- Concept badges -->
+              <div class="concept-badges">
+                <span class="badge">OOP</span>
+                <span class="badge">Design Patterns</span>
+                <span class="badge">Algorithms</span>
+                <span class="badge">Agile</span>
+                <span class="badge">Jira</span>
+                <span class="badge">English B2</span>
+              </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skills-column reveal-right">
+              <h3 class="skills-column-title">
+                <i class="fas fa-brain" aria-hidden="true"></i>
+                Soft Skills
+              </h3>
+
+              <div class="soft-skills-grid">
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-bolt" aria-hidden="true"></i>
+                  </div>
+                  <h4>Quick Learner</h4>
+                  <p>
+                    Picks up new concepts fast and applies them immediately to
+                    projects.
+                  </p>
+                </div>
+
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-puzzle-piece" aria-hidden="true"></i>
+                  </div>
+                  <h4>Problem Solving</h4>
+                  <p>
+                    Breaks down complex challenges into structured, manageable
+                    steps.
+                  </p>
+                </div>
+
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-comments" aria-hidden="true"></i>
+                  </div>
+                  <h4>Communication</h4>
+                  <p>
+                    Explains technical concepts clearly to both technical and
+                    non-technical audiences.
+                  </p>
+                </div>
+
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                  </div>
+                  <h4>Team Collaboration</h4>
+                  <p>
+                    Works effectively in cross-functional teams with shared
+                    goals.
+                  </p>
+                </div>
+
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-sync-alt" aria-hidden="true"></i>
+                  </div>
+                  <h4>Adaptability</h4>
+                  <p>
+                    Thrives in dynamic environments and embraces changing
+                    requirements.
+                  </p>
+                </div>
+
+                <div class="soft-skill-card glass-card">
+                  <div class="soft-icon">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                  </div>
+                  <h4>Time Management</h4>
+                  <p>
+                    Balances academic workload, self-study, and project delivery
+                    effectively.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         PROJECTS SECTION
+    ============================================================ -->
+      <section
+        class="section projects-section"
+        id="projects"
+        aria-labelledby="projects-heading"
+      >
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-label">03 — Projects</span>
+            <h2 class="section-title" id="projects-heading">
+              Things I've Built
+            </h2>
+          </div>
+
+          <!-- Filter buttons -->
+          <div
+            class="project-filters reveal-up"
+            role="group"
+            aria-label="Filter projects by technology"
+          >
+            <button
+              class="filter-btn active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="html-css"
+              aria-pressed="false"
+            >
+              HTML/CSS
+            </button>
+            <button
+              class="filter-btn"
+              data-filter="javascript"
+              aria-pressed="false"
+            >
+              JavaScript
+            </button>
+            <button class="filter-btn" data-filter="php" aria-pressed="false">
+              PHP
+            </button>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Featured: Skill Swap -->
+            <article
+              class="project-card featured-card glass-card reveal-up"
+              data-tags="html-css javascript php"
+              aria-label="Skill Swap Platform project"
+            >
+              
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eng-MohamedHossam/skill_Swap_Site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link-btn"
+                    aria-label="View Skill Swap on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link-btn"
+                    aria-label="View Skill Swap live demo"
+                  >
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">Skill Swap Platform</h3>
+              <p class="project-description">
+                A platform where users teach skills they know to earn points —
+                then spend those points to learn from others. Built the complete
+                front-end; collaborated with a back-end teammate.
+              </p>
+
+              <div class="project-role">
+                <i class="fas fa-user-cog" aria-hidden="true"></i>
+                <span>Role: Front-End Developer</span>
+              </div>
+
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">PHP</span>
+              </div>
+            </article>
+
+            <!-- Gym Landing Page -->
+            <article
+              class="project-card glass-card reveal-up"
+              data-tags="html-css"
+              aria-label="Gym Landing Page project"
+            >
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eng-MohamedHossam/route-projects/tree/main/gym-landing-page"
+                    class="project-link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Gym Landing Page on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link-btn"
+                    aria-label="View Gym Landing Page live demo"
+                  >
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Gym Landing Page</h3>
+              <p class="project-description">
+                A fitness-focused landing page built to practice HTML and CSS
+                fundamentals. Used float layouts to master the classic CSS
+                positioning model.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Float Layout</span>
+              </div>
+            </article>
+
+            <!-- Drone Landing Page -->
+            <article
+              class="project-card glass-card reveal-up"
+              data-tags="html-css"
+              aria-label="Drone Landing Page project"
+            >
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eng-MohamedHossam/route-projects/tree/main/drone-landing-page"
+                    class="project-link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Drone Landing Page on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link-btn"
+                    aria-label="View Drone Landing Page live demo"
+                  >
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Drone Landing Page</h3>
+              <p class="project-description">
+                A modern drone product landing page built to practice Flexbox
+                and CSS Grid. Focused on responsive design and modern layout
+                techniques.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Flexbox</span>
+                <span class="tag">CSS Grid</span>
+              </div>
+            </article>
+
+            <!-- Finance Dashboard -->
+            <article
+              class="project-card glass-card reveal-up"
+              data-tags="html-css"
+              aria-label="Finance Dashboard project"
+            >
+              <div class="project-header">
+                <div class="project-icon">
+                  <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Eng-MohamedHossam/route-projects/tree/main/finance-dashboard"
+                    class="project-link-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="View Finance Dashboard on GitHub"
+                  >
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link-btn"
+                    aria-label="View Finance Dashboard live demo"
+                  >
+                    <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+              <h3 class="project-title">Finance Dashboard</h3>
+              <p class="project-description">
+                A responsive finance dashboard built using HTML, CSS, Flexbox,
+                and Grid. Focused on clean layout structure and responsive UI
+                design.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Flexbox</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </article>
+
+            <!-- Placeholder card  -->
+            <article
+              class="project-card placeholder-card glass-card reveal-up"
+              aria-label="Future project slot"
+            >
+              <div class="placeholder-inner">
+                <div class="placeholder-icon">
+                  <i class="fas fa-plus" aria-hidden="true"></i>
+                </div>
+                <h3>Future Project</h3>
+                <p>Full-stack project planned during Route Academy course.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         CERTIFICATIONS SECTION
+    ============================================================ -->
+      <section
+        class="section certs-section"
+        id="certifications"
+        aria-labelledby="certs-heading"
+      >
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-label">04 — Certifications</span>
+            <h2 class="section-title" id="certs-heading">Credentials</h2>
+          </div>
+      
+            <!-- Cert filter -->
+<div class="project-filters reveal-up" role="group" aria-label="Filter certifications by category">
+  <button class="filter-btn active" data-filter="all-certs" aria-pressed="true">All</button>
+  <button class="filter-btn" data-filter="technical" aria-pressed="false">Technical</button>
+  <button class="filter-btn" data-filter="general" aria-pressed="false">General</button>
+</div>
+
+<div class="certs-grid" id="certsGrid">
+
+  <div class="cert-card glass-card reveal-up" data-cert-tag="technical" data-cert-img="imges/Python Certificate .jpg" aria-label="Huawei Python Certificate">
+    <div class="cert-logo">
+      <img src="imges/Python Certificate .jpg" alt="Huawei Python Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+    </div>
+    <div class="cert-body">
+      <h3 class="cert-title">Python Certificate</h3>
+      <span class="cert-issuer">Huawei</span>
+      <p class="cert-desc">Covered Python fundamentals, data structures, and programming logic.</p>
+    </div>
+    <div class="cert-ribbon technical-ribbon">Technical</div>
+  </div>
+
+  <div class="cert-card glass-card reveal-up" data-cert-tag="general" data-cert-img="imges/ICDL Certificate.jpg" aria-label="ICDL Certificate">
+    <div class="cert-logo">
+      <img src="imges/ICDL Certificate.jpg" alt="ICDL Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+    </div>
+    <div class="cert-body">
+      <h3 class="cert-title">ICDL Certificate</h3>
+      <span class="cert-issuer">ICDL Foundation</span>
+      <p class="cert-desc">International Computer Driving Licence — digital literacy and office tools.</p>
+    </div>
+    <div class="cert-ribbon general-ribbon">General</div>
+  </div>
+
+  <div class="cert-card glass-card reveal-up" data-cert-tag="technical" data-cert-img="imges/C++ Certificate_page.jpg" aria-label="C++ Certificate">
+    <div class="cert-logo">
+      <img src="imges/C++ Certificate_page.jpg" alt="C++ Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+    </div>
+    <div class="cert-body">
+      <h3 class="cert-title">C++ Certificate</h3>
+      <span class="cert-issuer">Programming Fundamentals</span>
+      <p class="cert-desc">C++ fundamentals including OOP, memory management, and algorithms.</p>
+    </div>
+    <div class="cert-ribbon technical-ribbon">Technical</div>
+  </div>
+
+  <div class="cert-card glass-card reveal-up" data-cert-tag="general" data-cert-img="imges/9 Hours English_page.jpg" aria-label="English Certificate">
+    <div class="cert-logo">
+      <img src="imges/9 Hours English_page.jpg" alt="C++ Certificate" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" />
+    </div>
+    <div class="cert-body">
+      <h3 class="cert-title">English Certificate</h3>
+      <span class="cert-issuer">B2 Level</span>
+      <p class="cert-desc">Professional English communication — reading, writing, and speaking at B2 level.</p>
+    </div>
+    <div class="cert-ribbon general-ribbon">General</div>
+  </div>
+
+  <!-- Placeholder cert -->
+  <div class="cert-card placeholder-cert glass-card reveal-up" aria-label="Future certification slot">
+    <div class="placeholder-inner">
+      <i class="fas fa-plus" aria-hidden="true"></i>
+      <p>Next Certification</p>
+      <small>Currently pursuing...</small>
+    </div>
+  </div>
+
+</div>
+</section>
+
+      <!-- ============================================================
+                            CONTACT SECTION
+           ============================================================ 
+       -->
+      <section
+        class="section contact-section"
+        id="contact"
+        aria-labelledby="contact-heading"
+      >
+        <div class="container">
+          <div class="section-header reveal-up">
+            <span class="section-label">05 — Contact</span>
+            <h2 class="section-title" id="contact-heading">Let's Connect</h2>
+            <p class="section-subtitle reveal-up">
+              I'm actively looking for internship opportunities. Whether you
+              have a role, a project, or just want to chat about tech — my inbox
+              is open.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact info -->
+            <div class="contact-info reveal-left">
+              <div class="contact-cta-box glass-card">
+                <h3>Open to Opportunities</h3>
+                <p>
+                  Looking for front-end or software engineering internships
+                  where I can contribute, learn, and grow fast.
+                </p>
+
+                <div class="contact-links">
+                  <a
+                    href="mailto:eng0mohamed0hossam5@gmail.com"
+                    class="contact-link-item"
+                    aria-label="Send email to Mohamed"
+                  >
+                    <div class="contact-link-icon">
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-link-text">
+                      <span class="link-label">Email</span>
+                      <span class="link-value"
+                        >eng0mohamed0hossam5@gmail.com</span
+                      >
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://github.com/Eng-MohamedHossam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link-item"
+                    aria-label="Visit GitHub profile"
+                  >
+                    <div class="contact-link-icon">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-link-text">
+                      <span class="link-label">GitHub</span>
+                      <span class="link-value">Eng-MohamedHossam</span>
+                    </div>
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/moh-hossam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-link-item"
+                    aria-label="Visit LinkedIn profile"
+                  >
+                    <div class="contact-link-icon">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                    </div>
+                    <div class="contact-link-text">
+                      <span class="link-label">LinkedIn</span>
+                      <span class="link-value">moh-hossam</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="contact-form-wrapper reveal-right">
+              <div class="contact-form-card glass-card">
+                <h3>Send a Message</h3>
+                <form
+                  id="contactForm"
+                  class="contact-form"
+                  novalidate
+                  aria-label="Contact form"
+                >
+                  <div class="form-group">
+                    <label for="contactName"
+                      >Name <span aria-hidden="true">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                      autocomplete="name"
+                      aria-required="true"
+                    />
+                    <div
+                      class="form-error"
+                      role="alert"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactEmail"
+                      >Email <span aria-hidden="true">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="contactEmail"
+                      name="email"
+                      placeholder="your@email.com"
+                      required
+                      autocomplete="email"
+                      aria-required="true"
+                    />
+                    <div
+                      class="form-error"
+                      role="alert"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <input
+                      type="text"
+                      id="contactSubject"
+                      name="subject"
+                      placeholder="Internship opportunity / Project collaboration..."
+                      autocomplete="off"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="contactMessage"
+                      >Message <span aria-hidden="true">*</span></label
+                    >
+                    <textarea
+                      id="contactMessage"
+                      name="message"
+                      rows="5"
+                      placeholder="Hi Mohamed, I'd love to..."
+                      required
+                      aria-required="true"
+                    ></textarea>
+                    <div
+                      class="form-error"
+                      role="alert"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-full"
+                    id="submitBtn"
+                  >
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                    <span>Send Message</span>
+                  </button>
+
+                  <div
+                    class="form-success"
+                    id="formSuccess"
+                    role="status"
+                    aria-live="polite"
+                    aria-hidden="true"
+                  >
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    Message received! I'll get back to you soon.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo" aria-label="Back to top">
+              <span class="logo-bracket">&lt;</span>MH<span class="logo-bracket"
+                >/&gt;</span
+              >
+            </a>
+            <p>
+              Software Engineering Student<br />Building skills, one project at
+              a time.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <strong>Quick Links</strong>
+            <ul role="list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <strong>Find Me</strong>
+            <div class="footer-social-links">
+              <a
+                href="https://github.com/Eng-MohamedHossam"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/moh-hossam"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:eng0mohamed0hossam5@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© <span id="currentYear"></span> Mohamed Hossam.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+  
+
+  <!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+    <i class="fas fa-times"></i>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="Certificate" />
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
