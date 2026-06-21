@@ -408,12 +408,20 @@ document.addEventListener("click", (e) => {
 /* ============================================================
    11. CONTACT FORM — Validation & Simulated Submit
 ============================================================ */
+
 (function initContactForm() {
   const form = document.getElementById("contactForm");
   const submitBtn = document.getElementById("submitBtn");
   const successMsg = document.getElementById("formSuccess");
   if (!form) return;
 
+  // ── Get Formspree ID from the form's data attribute ──────
+  const formspreeId = form.dataset.formspreeId;
+  const FORMSPREE_URL = formspreeId
+    ? `https://formspree.io/f/${formspreeId}`
+    : null;
+
+  // ── Field validation ──────────────────────────────────────
   function validate(field) {
     const errorEl = field.closest(".form-group")?.querySelector(".form-error");
     let msg = "";
@@ -431,7 +439,7 @@ document.addEventListener("click", (e) => {
     return !msg;
   }
 
-  // Live validation on blur
+  // Live validation on blur / while fixing errors
   form.querySelectorAll("input, textarea").forEach((field) => {
     field.addEventListener("blur", () => validate(field));
     field.addEventListener("input", () => {
@@ -439,7 +447,8 @@ document.addEventListener("click", (e) => {
     });
   });
 
-  form.addEventListener("submit", (e) => {
+  // ── Submit ────────────────────────────────────────────────
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const fields = [
@@ -448,25 +457,74 @@ document.addEventListener("click", (e) => {
     const allValid = fields.map((f) => validate(f)).every(Boolean);
     if (!allValid) return;
 
-    // Simulate sending (replace with real API later)
+    // UI: loading state
     submitBtn.disabled = true;
     submitBtn.innerHTML =
       '<i class="fas fa-spinner fa-spin" aria-hidden="true"></i> <span>Sending...</span>';
 
-    setTimeout(() => {
-      form.reset();
-      successMsg.classList.add("show");
-      successMsg.setAttribute("aria-hidden", "false");
-      submitBtn.disabled = false;
-      submitBtn.innerHTML =
-        '<i class="fas fa-paper-plane" aria-hidden="true"></i> <span>Send Message</span>';
+    // ── If Formspree ID is set → real submission ──────────
+    if (FORMSPREE_URL) {
+      try {
+        const response = await fetch(FORMSPREE_URL, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form),
+        });
 
-      setTimeout(() => {
-        successMsg.classList.remove("show");
-        successMsg.setAttribute("aria-hidden", "true");
-      }, 5000);
-    }, 1500);
+        if (response.ok) {
+          showSuccess();
+        } else {
+          const data = await response.json();
+          const errorMsg =
+            data?.errors?.map((e) => e.message).join(", ") ||
+            "Something went wrong. Please email me directly.";
+          showError(errorMsg);
+        }
+      } catch (err) {
+        showError(
+          "Network error. Please email me directly at eng0mohamed0hossam5@gmail.com",
+        );
+      }
+
+      // ── If no ID yet → fallback simulation (remove once live) ──
+    } else {
+      console.warn(
+        "Formspree ID not set — showing simulated success. See script.js section 11 for setup.",
+      );
+      setTimeout(showSuccess, 1200);
+    }
   });
+
+  function showSuccess() {
+    form.reset();
+    submitBtn.disabled = false;
+    submitBtn.innerHTML =
+      '<i class="fas fa-paper-plane" aria-hidden="true"></i> <span>Send Message</span>';
+    successMsg.classList.add("show");
+    successMsg.setAttribute("aria-hidden", "false");
+    setTimeout(() => {
+      successMsg.classList.remove("show");
+      successMsg.setAttribute("aria-hidden", "true");
+    }, 6000);
+  }
+
+  function showError(msg) {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML =
+      '<i class="fas fa-paper-plane" aria-hidden="true"></i> <span>Send Message</span>';
+    // Show error in the form's last .form-error element as a fallback
+    const errEl = form.querySelector("#formError");
+    if (errEl) {
+      errEl.textContent = msg;
+      errEl.style.display = "block";
+      setTimeout(() => {
+        errEl.textContent = "";
+        errEl.style.display = "none";
+      }, 6000);
+    } else {
+      alert(msg);
+    }
+  }
 })();
 
 /* ============================================================
